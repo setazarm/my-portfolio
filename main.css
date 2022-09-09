@@ -13,7 +13,7 @@ body{
   background: linear-gradient(80deg,var(--main-color
   ) 77%, var(--main-yellow) 23%);
     margin:0 0;
-    padding: 0;
+    padding:0 0;
   
     position: relative;
     font-family: 'Merriweather Sans', sans-serif;
@@ -314,14 +314,16 @@ h1 {
 
   footer{
     position: fixed;
+    width: 100%;
+    background-color:var(--main-color);
     height:50px;
-    bottom: 0;
+    bottom:0;
     left: 0;
     display: flex;
     gap: 1.5em;
     justify-content:flex-start;
     align-items: center;
-    margin-bottom: 1em;
+   
     margin-top: 2em;
   }
 
@@ -383,3 +385,82 @@ h1 {
   width: 300px;
 
 }
+.my-projects-text{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-wrap:wrap;
+}
+/* contact */
+.main-contact{
+min-height: 100vh;
+margin: 5em 3em;
+color: var(--text-color);
+background: linear-gradient(70deg,var(--main-yellow
+) 33%, var(--main-color) 67%);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius:10px;
+  margin:2em 2em;
+  gap: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+}
+label{
+  align-self: flex-start;
+ margin-left: 3em;
+}
+
+input,textarea{
+  background-color:  rgb(39, 37, 37);
+  width: 80%;
+  outline-color: var(--main-yellow);
+  
+}
+button[type="submit"]{
+  background-color:var(--main-yellow);
+  width:80%;
+  border-radius: 5px;
+  font-size: 1.5em;
+}
+ .connect{
+ margin:8em 2em ;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-transform: uppercase;
+  font-size: 1.5em;
+ }
+.connect h2{
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+ .my-mail::before{
+  content: ' \f0e0';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  padding-right: 0.5em;
+
+ }
+.my-phone{
+  letter-spacing: 2px;
+  
+}
+ .my-phone::before{
+  content: ' \f095';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  padding-right: 0.5em;
+
+ }
+ .follow-me a{
+  color: var(--text-color);
+  font-size: 1.5em;
+  padding-left: 1em;
+ }
