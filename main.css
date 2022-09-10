@@ -138,12 +138,12 @@ aside{
  display: flex;
  flex-direction: column;
  justify-content:space-around;
- border-radius: 3em;
+ border-radius: 1em;
  box-shadow: 20px 20px 100px 8px var(--text-color); 
 }
 aside i{
-     padding: 0.75em;
-    font-size: 1.5em;
+     padding: 0.5em;
+    font-size: 2em;
     color: var(--main-color);
     text-align: center;
 }
@@ -155,7 +155,13 @@ aside i:hover{
     aside{
         display: none;
     }
+   body{
+    background:var(--main-color);
+   }
    
+}
+.main-page{
+  min-height: 100vh;
 }
 .intro{
     display: flex;
@@ -168,25 +174,40 @@ aside i:hover{
 }
 .main-text{
   color:var(--text-color);
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align:justify;
     width: 100%;
     line-height: 1.2;
+    animation-name: jump;
+    animation-duration: 500ms;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards; 
+    opacity: 0;
+    animation-delay: 200ms;
+}
+.main-text a{
+  color: var(--main-yellow);
 }
 
 .skills{
     display: flex;
     flex-wrap:wrap;
-    justify-content: space-around;
     gap: 1em;
-    align-items: flex-start;
-
+    animation-name: jump;
+    animation-duration: 500ms;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards; 
+    opacity: 0;
+    animation-delay:500ms
+    
 }
 .skills h2{
-    margin-top:1em;
+    margin-top:2em;
     flex-basis: 100%;
-    text-align: center;
+    text-align: left;
     color: var(--text-color);
+    font-weight: bold;
+ 
 }
   
 
@@ -201,14 +222,19 @@ aside i:hover{
          border-radius: 5px;
         font-weight: 600;
         color:var(--main-gray);
-        transition: all 2s;
-        
+       
+        /* transition: all 2s; */
+        /* animation-name: rotate;
+        animation-iteration-count: 3;
+        animation-duration: 10s;
+        animation-fill-mode:forwards; */
        
 }
-.skills div:hover{
+
+/* .skills div:hover{
     margin-right:5em ;
    
-}
+} */
 
 /* for animating H1 */
 h1 {
@@ -253,12 +279,14 @@ h1 {
   .project h2{
    color: var(--text-color);
    font-weight: 900;
+   text-transform: uppercase;
   }
-  .project h2::after{
+  .project h2::before{
     content: ' \f061';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     color: var(--main-yellow);
+    padding-right: 0.5em;
   }
   
   
@@ -267,7 +295,7 @@ h1 {
    background:var(--main-color);
    margin-top: 10em;
     margin-bottom: 2em;
-    padding:1em 1em;
+    padding: 2em;
     border-radius: 15px;
    letter-spacing: 3px;
      animation-name: jump;
@@ -361,8 +389,10 @@ h1 {
   min-height: 100vh;
   background-color:var(--text-color);
   border-radius: 30px;
-  
+ 
 }
+
+
 .my-projects-title{
   text-align: center;
   line-height: 3;
@@ -376,14 +406,24 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   text-shadow:var(--main-yellow) 1px 0 10px;
+  
 }
+
 .my-projects-title p{
   font-size: 1.5em;
 }
 .my-projects img{
   display: block;
   width: 300px;
+ 
+}
+@keyframes rotate {
+  0%{ transform: perspective(400px) rotateY(0deg);
 
+  }
+  100%{
+    transform:perspective(400px) rotateY(360deg) ;
+  }
 }
 .my-projects-text{
   display: flex;
