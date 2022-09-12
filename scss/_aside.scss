@@ -1,0 +1,28 @@
+aside{
+    position: absolute;
+    top: 5%;
+    left: 0.5em;
+    background-color:var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    border-radius: 1em;
+    box-shadow: 20px 20px 100px 8px var(--text-color); 
+
+    i{
+        padding: 0.5em;
+       font-size: 2em;
+       color: var(--main-color);
+       text-align: center;
+       &:hover{
+        color: var(--main-yellow);
+       }
+    }
+   }
+
+   @media only screen and (max-width: 576px){
+       aside{
+           display: none;
+       }
+      
+   }

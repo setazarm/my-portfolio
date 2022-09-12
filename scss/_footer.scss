@@ -1,0 +1,32 @@
+
+
+    footer{
+        position: fixed;
+        width: 100%;
+        background-color:var(--main-color);
+        height:50px;
+        bottom:0;
+        left: 0;
+        display: flex;
+        gap: 1.5em;
+        justify-content:flex-start;
+        align-items: center;
+        margin-top: 2em;
+        a{
+            text-decoration: none;
+            color: var(--main-yellow);
+            padding-left: 3em;
+            &:hover{
+                transform: scale(1.5);
+                color:var(--text-color);
+               text-decoration: var(--main-yellow)  5px solid underline;
+           
+            }
+        }
+        
+      }
+    
+    
+     
+
+  
