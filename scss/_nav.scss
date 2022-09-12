@@ -1,0 +1,52 @@
+nav{
+    /* position: fixed;
+    top:0; */
+    margin-top: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* box-shadow: 0 0px 10px 0px var(--main-gray);
+    z-index:100; */
+    a{
+        display:inline-block;
+        text-decoration: none;
+        padding-right: 2em;
+        color:var(--text-color);
+        transition:all 0.5s ease-in-out;
+        font-size: 2em;
+        &:hover{
+            transform: scale(1.5);
+           color:var(--text-color);
+          text-decoration: var(--main-yellow)  5px solid underline;
+
+        }
+       
+    } 
+    .logo{
+   
+        font-family: 'Grandstander', cursive;
+        font-size: 2em;
+        padding-left: 1em;
+        animation-name: logo;
+        animation-iteration-count: 1;
+        animation-duration: 3s;
+        animation-fill-mode:forwards;
+    }
+  
+  }
+  
+
+  
+   
+  @keyframes logo{
+      from { 
+          transform: rotate(0deg);
+        
+      } to { 
+          transform: rotate(360deg); 
+          color:var(--main-yellow);
+          
+  
+      }
+  
+  }

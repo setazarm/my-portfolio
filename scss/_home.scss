@@ -1,0 +1,166 @@
+.main-page{
+    min-height: 100vh;
+  }
+  .intro{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap:1em; 
+      margin-left: 2em;
+      margin-top:8em;
+      margin-bottom: 2em;
+  }
+  .main-text{
+    color:var(--text-color);
+      font-size: 1.5rem;
+      text-align:justify;
+      width: 100%;
+      line-height: 1.2;
+      animation-name: jump;
+      animation-duration: 500ms;
+      animation-iteration-count:1;
+      animation-fill-mode: forwards; 
+      opacity: 0;
+      animation-delay: 200ms;
+  }
+  .main-text a{
+    color: var(--main-yellow);
+  }
+  
+  .skills{
+      display: flex;
+      flex-wrap:wrap;
+      gap: 1em;
+      animation-name: jump;
+      animation-duration: 500ms;
+      animation-iteration-count:1;
+      animation-fill-mode: forwards; 
+      opacity: 0;
+      animation-delay:500ms
+      
+  }
+  .skills h2{
+      margin-top:2em;
+      flex-basis: 100%;
+      text-align: left;
+      color: var(--text-color);
+      font-weight: bold;
+   
+  }
+    
+  
+  .skills div{
+      
+     
+          padding: 1rem 2rem;
+          /* margin-bottom: 1.5rem;
+          margin-right: 1.5rem; */
+          font-size: 1.6rem;
+          background: var(--text-color);
+           border-radius: 5px;
+          font-weight: 600;
+          color:var(--main-gray);
+         
+          /* transition: all 2s; */
+          /* animation-name: rotate;
+          animation-iteration-count: 3;
+          animation-duration: 10s;
+          animation-fill-mode:forwards; */
+         
+  }
+  
+  /* .skills div:hover{
+      margin-right:5em ;
+     
+  } */
+  
+  /* for animating H1 */
+  h1 {
+      color: hsl(0, 0%, 27%);
+      font-size: 50px;
+      font-weight: bold;
+      font-family: monospace;
+      letter-spacing: 7px;
+      text-transform: uppercase;
+      background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s infinite linear;
+    }
+    
+   
+    
+    @keyframes shine {
+      0% {
+        background-position: 0;
+      }
+      60% {
+        background-position: 600px;
+      }
+      100% {
+        background-position: 600px;
+      }
+    }
+
+
+    .project h2{
+        color: var(--text-color);
+        font-weight: 900;
+        text-transform: uppercase;
+       }
+       .project h2::before{
+         content: ' \f061';
+         font-family: 'Font Awesome 5 Free';
+         font-weight: 900;
+         color: var(--main-yellow);
+         padding-right: 0.5em;
+       }
+       
+       
+       .project{
+       border: 3px solid var(--text-color);
+        background:var(--main-color);
+        margin-top: 10em;
+         margin-bottom: 2em;
+         padding: 2em;
+         border-radius: 15px;
+        letter-spacing: 3px;
+          animation-name: jump;
+         animation-duration: 500ms;
+         animation-iteration-count:1;
+         animation-fill-mode: forwards; 
+         opacity: 0;
+        text-transform: capitalize;
+        text-align: center;
+        
+       }
+       
+       .project:nth-child(1){
+         animation-delay: 1s;
+       }
+       /* }
+       .project:nth-child(3){
+         animation-delay: 3s;
+     
+       }
+       .project:nth-child(4){
+         animation-delay: 4s;
+     
+       }
+       .project:nth-child(5){
+         animation-delay: 5s;
+     
+       }  */
+        @keyframes jump {
+         0% {
+           transform:  scale(0.6) translate(-300%,-300%);
+           opacity: 0;
+       }
+     
+      
+     
+       100% {
+           transform: scale(1) translateX(0) translateY(0%);
+           opacity: 1;
+       }
+    }
