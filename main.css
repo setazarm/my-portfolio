@@ -268,6 +268,8 @@ h1 {
   opacity: 0;
   text-transform: capitalize;
   text-align: center;
+  transition: color 300ms ease-in-out;
+  z-index: 1;
 }
 .project a {
   text-decoration: none;
@@ -284,6 +286,7 @@ h1 {
   font-weight: 900;
   color: var(--main-yellow);
   padding-right: 0.5em;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .project:nth-child(1) {
@@ -313,10 +316,35 @@ h1 {
     opacity: 1;
   }
 }
+.project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: var(--main-yellow);
+  border-radius: 15px;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.project:hover::before,
+.project:focus::before {
+  transform: scaleX(1);
+}
+
+.project:hover h2, .project:focus h2 {
+  color: var(--main-color);
+}
+
 .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  /* background-color: var(--text-color); */
-  /* margin: 6em 6em; */
   color: var(--text-color);
 }
 .about .about-text {
@@ -330,7 +358,6 @@ h1 {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  margin-top: 5em;
 }
 
 .my-projects {
@@ -338,41 +365,45 @@ h1 {
   background-color: var(--text-color);
   border-radius: 30px;
 }
-
-.my-projects-title {
+.my-projects img {
+  display: block;
+  width: 300px;
+}
+.my-projects a {
+  text-decoration: none;
+  color: var(--main-color);
+  background-color: var(--main-yellow);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 1.5em;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+.my-projects a:hover {
+  transform: scaleX(1.5);
+  border: 2px solid var(--main-color);
+}
+.my-projects .my-projects-title {
   text-align: center;
   line-height: 3;
   padding: 6em 0;
 }
-.my-projects-title h2 {
+.my-projects .my-projects-title h2 {
   letter-spacing: 3px;
   font-size: 2em;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: var(--main-yellow) 1px 0 10px;
 }
-.my-projects-title p {
+.my-projects .my-projects-title p {
   font-size: 1.5em;
 }
-
-.my-projects img {
-  display: block;
-  width: 300px;
-}
-
-@keyframes rotate {
-  0% {
-    transform: perspective(400px) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(400px) rotateY(360deg);
-  }
-}
-.my-projects-text {
+.my-projects .my-projects-text {
   display: flex;
   flex-direction: column;
   gap: 1em;
   flex-wrap: wrap;
+  margin-bottom: 2em;
 }
 
 .main-contact {

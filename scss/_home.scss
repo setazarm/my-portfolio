@@ -128,6 +128,8 @@
          opacity: 0;
         text-transform: capitalize;
         text-align: center;
+        transition:color 300ms ease-in-out;
+        z-index: 1;
         a{
             text-decoration: none;
             color: var(--text-color);
@@ -137,11 +139,13 @@
             color: var(--text-color);
             font-weight: 900;
             text-transform: uppercase;
+
             &::before{ content: ' \f061';
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             color: var(--main-yellow);
             padding-right: 0.5em;
+            text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; 
            }
         
        }
@@ -176,3 +180,25 @@
            opacity: 1;
        }
     }
+   .project::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: var(--main-yellow);
+    border-radius: 15px;
+    transition:transform 300ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+   }
+   .project:hover::before,
+   .project:focus::before{
+    transform: scaleX(1);
+   }
+
+   .project:hover h2,.project:focus h2{
+    color: var(--main-color);
+   }
