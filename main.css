@@ -21,6 +21,7 @@ nav a {
   color: var(--text-color);
   transition: all 0.5s ease-in-out;
   font-size: 2em;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 nav a:hover {
   transform: scale(1.5);
@@ -35,6 +36,7 @@ nav .logo {
   animation-iteration-count: 1;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 @keyframes logo {
@@ -46,6 +48,64 @@ nav .logo {
     color: var(--main-yellow);
   }
 }
+.fa-bars {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  font-size: 3em;
+  margin-right: 1em;
+}
+
+@media (max-width: 992px) {
+  .navbar-links a, .night-mode {
+    display: none;
+  }
+  .dropdown li a {
+    display: block;
+    font-size: 1em;
+  }
+}
+@media (min-width: 992px) {
+  .fa-bars {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .fa-bars {
+    color: var(--main-yellow);
+  }
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  right: -0.6em;
+  top: 1em;
+  background-color: var(--main-color);
+  border-radius: 30px;
+  width: 100vw;
+  box-shadow: 0px 30px 10px -15px var(--main-color);
+}
+.dropdown li {
+  list-style-type: none;
+  line-height: 3;
+  text-decoration: none;
+  font-size: 0.3em;
+}
+.dropdown a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.fa-bars:hover .dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fa-moon {
+  color: var(--main-color);
+}
+
 footer {
   position: fixed;
   width: 100%;
@@ -115,17 +175,18 @@ aside i:hover {
   font-size: 1.5rem;
   text-align: justify;
   width: 100%;
-  line-height: 1.2;
+  line-height: 1.5;
   animation-name: jump;
   animation-duration: 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   opacity: 0;
   animation-delay: 200ms;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-
 .main-text a {
   color: var(--main-yellow);
+  text-decoration: none;
 }
 
 .skills {
@@ -139,15 +200,14 @@ aside i:hover {
   opacity: 0;
   animation-delay: 500ms;
 }
-
 .skills h2 {
   margin-top: 2em;
   flex-basis: 100%;
   text-align: left;
   color: var(--text-color);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   font-weight: bold;
 }
-
 .skills div {
   padding: 1rem 2rem;
   /* margin-bottom: 1.5rem;
@@ -193,20 +253,6 @@ h1 {
     background-position: 600px;
   }
 }
-.project h2 {
-  color: var(--text-color);
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.project h2::before {
-  content: " \f061";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  color: var(--main-yellow);
-  padding-right: 0.5em;
-}
-
 .project {
   border: 3px solid var(--text-color);
   background: var(--main-color);
@@ -222,6 +268,22 @@ h1 {
   opacity: 0;
   text-transform: capitalize;
   text-align: center;
+}
+.project a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.project h2 {
+  color: var(--text-color);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.project h2::before {
+  content: " \f061";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: var(--main-yellow);
+  padding-right: 0.5em;
 }
 
 .project:nth-child(1) {
@@ -257,17 +319,16 @@ h1 {
   /* margin: 6em 6em; */
   color: var(--text-color);
 }
-
-.about-text {
+.about .about-text {
   margin: 6em 3em;
   line-height: 1.5;
   font-size: 1.5em;
+  text-align: justify;
 }
-
 .about img {
   display: block;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   margin-top: 5em;
 }
@@ -283,7 +344,6 @@ h1 {
   line-height: 3;
   padding: 6em 0;
 }
-
 .my-projects-title h2 {
   letter-spacing: 3px;
   font-size: 2em;
@@ -291,7 +351,6 @@ h1 {
   font-weight: bold;
   text-shadow: var(--main-yellow) 1px 0 10px;
 }
-
 .my-projects-title p {
   font-size: 1.5em;
 }
@@ -320,6 +379,7 @@ h1 {
   min-height: 100vh;
   margin: 5em 3em;
   color: var(--text-color);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
   background: linear-gradient(70deg, var(--main-yellow) 33%, var(--main-color) 67%);
 }
 
@@ -335,19 +395,16 @@ form {
   padding-top: 1em;
   padding-bottom: 1em;
 }
-
-label {
+form label {
   align-self: flex-start;
   margin-left: 3em;
 }
-
-input, textarea {
+form input, form textarea {
   background-color: rgb(39, 37, 37);
   width: 80%;
   outline-color: var(--main-yellow);
 }
-
-button[type=submit] {
+form button[type=submit] {
   background-color: var(--main-yellow);
   width: 80%;
   border-radius: 5px;
@@ -362,7 +419,6 @@ button[type=submit] {
   text-transform: uppercase;
   font-size: 1.5em;
 }
-
 .connect h2 {
   font-weight: bold;
   letter-spacing: 2px;
@@ -378,7 +434,6 @@ button[type=submit] {
 .my-phone {
   letter-spacing: 2px;
 }
-
 .my-phone::before {
   content: " \f095";
   font-family: "Font Awesome 5 Free";
@@ -402,6 +457,7 @@ body {
   padding: 0 0;
   position: relative;
   font-family: "Merriweather Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 @media only screen and (max-width: 576px) {
@@ -409,74 +465,5 @@ body {
     background: var(--main-color);
   }
 }
-.fa-bars {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  font-size: 3em;
-  margin-right: 1em;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  right: -0.6em;
-  top: 1em;
-  background-color: var(--main-color);
-  border-radius: 30px;
-  width: 100vw;
-  box-shadow: 0px 30px 10px -15px var(--main-color);
-}
-
-.dropdown li {
-  list-style-type: none;
-  line-height: 3;
-  text-decoration: none;
-  font-size: 0.3em;
-}
-
-.project a, .dropdown a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-.fa-bars:hover .dropdown {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-@media (min-width: 768px) {
-  .fa-bars {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .navbar-links a, .night-mode {
-    display: none;
-  }
-  .dropdown li a {
-    display: block;
-    font-size: 1em;
-  }
-}
-.fa-moon {
-  color: var(--main-color);
-}
-
-/* trying for night mode */
-/* @media (prefers-color-scheme: dark) {
-    body {
-      color: #eee;
-      background: #121212;
-    }
-
-    a {
-      color: #809fff;
-    }
-  } */
-/* about */
-/* my projects page */
-/* contact */
 
 /*# sourceMappingURL=main.css.map */

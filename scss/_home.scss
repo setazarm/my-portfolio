@@ -15,17 +15,21 @@
       font-size: 1.5rem;
       text-align:justify;
       width: 100%;
-      line-height: 1.2;
+      line-height: 1.5;
       animation-name: jump;
       animation-duration: 500ms;
       animation-iteration-count:1;
       animation-fill-mode: forwards; 
       opacity: 0;
       animation-delay: 200ms;
+      text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; 
+      a{
+        color: var(--main-yellow);
+        text-decoration: none;
+      }
+
   }
-  .main-text a{
-    color: var(--main-yellow);
-  }
+  
   
   .skills{
       display: flex;
@@ -36,38 +40,40 @@
       animation-iteration-count:1;
       animation-fill-mode: forwards; 
       opacity: 0;
-      animation-delay:500ms
-      
-  }
-  .skills h2{
-      margin-top:2em;
-      flex-basis: 100%;
-      text-align: left;
-      color: var(--text-color);
-      font-weight: bold;
-   
-  }
-    
-  
-  .skills div{
+      animation-delay:500ms;
+      h2{
+        margin-top:2em;
+        flex-basis: 100%;
+        text-align: left;
+        color: var(--text-color);
+      text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; 
+        font-weight: bold;
+     
+    }
+    div{
       
      
-          padding: 1rem 2rem;
-          /* margin-bottom: 1.5rem;
-          margin-right: 1.5rem; */
-          font-size: 1.6rem;
-          background: var(--text-color);
-           border-radius: 5px;
-          font-weight: 600;
-          color:var(--main-gray);
-         
-          /* transition: all 2s; */
-          /* animation-name: rotate;
-          animation-iteration-count: 3;
-          animation-duration: 10s;
-          animation-fill-mode:forwards; */
-         
+        padding: 1rem 2rem;
+        /* margin-bottom: 1.5rem;
+        margin-right: 1.5rem; */
+        font-size: 1.6rem;
+        background: var(--text-color);
+         border-radius: 5px;
+        font-weight: 600;
+        color:var(--main-gray);
+       
+        /* transition: all 2s; */
+        /* animation-name: rotate;
+        animation-iteration-count: 3;
+        animation-duration: 10s;
+        animation-fill-mode:forwards; */
+       
+}
   }
+  
+    
+  
+  
   
   /* .skills div:hover{
       margin-right:5em ;
@@ -103,18 +109,8 @@
     }
 
 
-    .project h2{
-        color: var(--text-color);
-        font-weight: 900;
-        text-transform: uppercase;
-       }
-       .project h2::before{
-         content: ' \f061';
-         font-family: 'Font Awesome 5 Free';
-         font-weight: 900;
-         color: var(--main-yellow);
-         padding-right: 0.5em;
-       }
+    
+       
        
        
        .project{
@@ -132,8 +128,24 @@
          opacity: 0;
         text-transform: capitalize;
         text-align: center;
+        a{
+            text-decoration: none;
+            color: var(--text-color);
+        
+          }
+          h2{
+            color: var(--text-color);
+            font-weight: 900;
+            text-transform: uppercase;
+            &::before{ content: ' \f061';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--main-yellow);
+            padding-right: 0.5em;
+           }
         
        }
+    }
        
        .project:nth-child(1){
          animation-delay: 1s;

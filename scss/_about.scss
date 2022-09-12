@@ -4,18 +4,19 @@
     /* background-color: var(--text-color); */
     /* margin: 6em 6em; */
     color: var(--text-color);
-  }
+  
   .about-text{
    margin: 6em 3em;
    line-height: 1.5;
    font-size: 1.5em;
-
+text-align: justify;
   }
-.about img{
+ img{
   display: block;
-  width:400px;
-  height: 400px;
+  width:300px;
+  height: 300px;
   border-radius: 50%;
  margin-top: 5em;
 
+}
 }

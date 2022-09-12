@@ -2,6 +2,8 @@
     min-height: 100vh;
     margin: 5em 3em;
     color: var(--text-color);
+    text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; 
+
     background: linear-gradient(70deg,var(--main-yellow
     ) 33%, var(--main-color) 67%);
     }
@@ -17,7 +19,7 @@
       padding-top: 1em;
       padding-bottom: 1em;
     
-    }
+    
     label{
       align-self: flex-start;
      margin-left: 3em;
@@ -35,6 +37,7 @@
       border-radius: 5px;
       font-size: 1.5em;
     }
+}
      .connect{
      margin:8em 2em ;
       display: flex;
@@ -42,11 +45,12 @@
       gap: 1em;
       text-transform: uppercase;
       font-size: 1.5em;
+      h2{
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
      }
-    .connect h2{
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
+    
      .my-mail::before{
       content: ' \f0e0';
       font-family: 'Font Awesome 5 Free';
@@ -56,15 +60,16 @@
      }
     .my-phone{
       letter-spacing: 2px;
+      &::before{
+        content: ' \f095';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        padding-right: 0.5em;
+      
+       }
       
     }
-     .my-phone::before{
-      content: ' \f095';
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 900;
-      padding-right: 0.5em;
-    
-     }
+     
      .follow-me a{
       color: var(--text-color);
       font-size: 1.5em;
