@@ -4,6 +4,7 @@
     --main-yellow:#facf0f;
     --main-color:#111;
   }
+  
   @import'./nav';
   @import'./footer';
   @import'./aside';
@@ -12,6 +13,8 @@
   @import'./project';
   @import'./contact';
   
+
+
   *{
       box-sizing: border-box;
   }

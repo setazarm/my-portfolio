@@ -28,10 +28,13 @@
 
 }
 @media (max-width:576px){
-  .about img, .about-text{
-    margin-left: .5em;
+  .about-text{
+    margin-left: 1em;
     margin-top: .5em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+  }
+  .about img{
+    display: none;
   }
   
 }

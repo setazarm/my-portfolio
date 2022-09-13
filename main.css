@@ -144,7 +144,7 @@ aside {
   flex-direction: column;
   justify-content: space-around;
   border-radius: 1em;
-  box-shadow: 20px 20px 100px 8px var(--text-color);
+  box-shadow: -8px -8px 100px 0px var(--text-color);
 }
 aside i {
   padding: 0.5em;
@@ -222,17 +222,17 @@ aside i:hover {
   border-radius: 5px;
   font-weight: 600;
   color: var(--main-gray);
-  /* transition: all 2s; */
+  transition: all 2s;
   /* animation-name: rotate;
   animation-iteration-count: 3;
   animation-duration: 10s;
   animation-fill-mode:forwards; */
 }
 
-/* .skills div:hover{
-    margin-right:5em ;
+.skills div:hover {
+  margin-left: 0.5em;
+}
 
-} */
 /* for animating H1 */
 h1 {
   color: hsl(0deg, 0%, 27%);
@@ -373,15 +373,19 @@ h1 {
 }
 
 @media (max-width: 576px) {
-  .about img, .about-text {
-    margin-left: 0.5em;
+  .about-text {
+    margin-left: 1em;
     margin-top: 0.5em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
+  }
+  .about img {
+    display: none;
   }
 }
 .my-projects {
   min-height: 100vh;
   background-color: var(--text-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 30px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 30px 30px 36px -18px inset;
   border-radius: 30px;
 }
 .my-projects img {
@@ -399,11 +403,9 @@ h1 {
   border-radius: 5px;
   font-size: 1.5em;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease-in-out;
 }
 .my-projects a:hover {
-  transform: scaleX(1.5);
-  border: 2px solid var(--main-color);
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 .my-projects .my-projects-title {
   text-align: center;

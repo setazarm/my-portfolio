@@ -1,7 +1,7 @@
 .my-projects{
-  
     min-height: 100vh;
     background-color:var(--text-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 30px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 30px 30px 36px -18px inset;
     border-radius: 30px;
     img{
       display: block;
@@ -19,10 +19,10 @@
       border-radius: 5px;
       font-size: 1.5em;
       box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
-      transition: transform .2s ease-in-out;
+      // transition: transform 1s ease-in-out;
       &:hover{
-        transform: scaleX(1.5);
-        border:2px solid var(--main-color);
+      //  transform: scaleX(1.5);
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
       }
     }
    
@@ -36,8 +36,6 @@
           text-transform: uppercase;
           font-weight: bolder;
           margin-right: 1rem;
-          
-          
         }
         p{
           font-size: 1.5em;
