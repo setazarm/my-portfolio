@@ -5,14 +5,10 @@
 }
 
 nav {
-  /* position: fixed;
-  top:0; */
   margin-top: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 0 0px 10px 0px var(--main-gray);
-  z-index:100; */
 }
 nav a {
   display: inline-block;
@@ -70,9 +66,12 @@ nav .logo {
     display: none;
   }
 }
-@media only screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .fa-bars {
     color: var(--main-yellow);
+  }
+  .logo {
+    font-size: 1em !important;
   }
 }
 .dropdown {
@@ -130,6 +129,12 @@ footer a:hover {
   text-decoration: var(--main-yellow) 5px solid underline;
 }
 
+@media (max-width: 576px) {
+  footer a {
+    padding-left: 0.5em;
+    font-size: 0.8em;
+  }
+}
 aside {
   position: absolute;
   top: 5%;
@@ -151,7 +156,7 @@ aside i:hover {
   color: var(--main-yellow);
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 992px) {
   aside {
     display: none;
   }
@@ -352,14 +357,28 @@ h1 {
   line-height: 1.5;
   font-size: 1.5em;
   text-align: justify;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.about .about-text h2 {
+  font-weight: bolder;
+  font-style: italic;
 }
 .about img {
   display: block;
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
+  width: 100%;
   border-radius: 50%;
+  margin-left: 6em;
+  margin-top: 6em;
 }
 
+@media (max-width: 576px) {
+  .about img, .about-text {
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+  }
+}
 .my-projects {
   min-height: 100vh;
   background-color: var(--text-color);
@@ -367,13 +386,16 @@ h1 {
 }
 .my-projects img {
   display: block;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
+  margin-left: 0.5em;
 }
 .my-projects a {
   text-decoration: none;
   color: var(--main-color);
   background-color: var(--main-yellow);
   padding: 0.5em 1em;
+  margin-left: 1em;
   border-radius: 5px;
   font-size: 1.5em;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
@@ -392,8 +414,8 @@ h1 {
   letter-spacing: 3px;
   font-size: 2em;
   text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: var(--main-yellow) 1px 0 10px;
+  font-weight: bolder;
+  margin-right: 1rem;
 }
 .my-projects .my-projects-title p {
   font-size: 1.5em;
@@ -401,12 +423,15 @@ h1 {
 .my-projects .my-projects-text {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 1em;
   flex-wrap: wrap;
   margin-bottom: 2em;
 }
 
 .main-contact {
+  display: flex;
+  flex-wrap: wrap;
   min-height: 100vh;
   margin: 5em 3em;
   color: var(--text-color);
@@ -478,6 +503,14 @@ form button[type=submit] {
   padding-left: 1em;
 }
 
+@media only screen and (max-width: 576px) {
+  .connect, label, form, .main-contact {
+    margin: 2em 0;
+  }
+  button[type=submit], .connect {
+    font-size: 0.8em;
+  }
+}
 * {
   box-sizing: border-box;
 }

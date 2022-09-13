@@ -10,13 +10,28 @@
    line-height: 1.5;
    font-size: 1.5em;
   text-align: justify;
+  text-shadow:1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000; 
+  h2{
+    font-weight: bolder;
+    font-style: italic;
+  }
   }
  img{
   display: block;
-  width:300px;
-  height: 300px;
+  max-width:300px;
+  width: 100%;
   border-radius: 50%;
-  
+  margin-left: 6em;
+  margin-top: 6em;
  
 }
+
+}
+@media (max-width:576px){
+  .about img, .about-text{
+    margin-left: .5em;
+    margin-top: .5em;
+    margin-bottom: 3em;
+  }
+  
 }

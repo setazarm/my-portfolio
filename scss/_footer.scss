@@ -26,7 +26,12 @@
         
       }
 
-      
+    @media(max-width:576px){
+        footer a{
+           padding-left: 0.5em;
+           font-size: 0.8em;
+        }
+    }
     
     
      

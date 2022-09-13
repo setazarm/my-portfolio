@@ -1,10 +1,13 @@
 .my-projects{
+  
     min-height: 100vh;
     background-color:var(--text-color);
     border-radius: 30px;
     img{
       display: block;
-      width: 300px;
+      max-width: 300px;
+      width: 100%;
+      margin-left: 0.5em;
      
     }
     a{
@@ -12,6 +15,7 @@
       color: var(--main-color);
       background-color: var(--main-yellow);
       padding: .5em 1em;
+      margin-left: 1em;
       border-radius: 5px;
       font-size: 1.5em;
       box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
@@ -30,8 +34,9 @@
           letter-spacing: 3px;
           font-size: 2em;
           text-transform: uppercase;
-          font-weight: bold;
-          text-shadow:var(--main-yellow) 1px 0 10px;
+          font-weight: bolder;
+          margin-right: 1rem;
+          
           
         }
         p{
@@ -41,6 +46,7 @@
     .my-projects-text{
       display: flex;
       flex-direction: column;
+      text-align: center;
       gap: 1em;
       flex-wrap:wrap;
       margin-bottom: 2em;
